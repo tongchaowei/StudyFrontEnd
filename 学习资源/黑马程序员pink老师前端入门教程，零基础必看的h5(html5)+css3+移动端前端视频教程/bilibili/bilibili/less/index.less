@@ -1,0 +1,204 @@
+// out: ../css/
+
+// 声明变量
+@v_width: 3.75vw;
+@color:#fb7299;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  
+  body {
+    font-family: Helvetica Neue,Tahoma,Arial,PingFangSC-Regular,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  .ellipsis-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+//   首页样式
+header {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: 10;
+
+    width: 100%;
+    height: (84 / @v_width);
+    // height: (84 / 6.67vh);
+    background-color: #fff;
+    // top
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: (44 / @v_width);
+        padding: 0 (12 / @v_width) 0 (18 / @v_width);
+
+        .left {
+            i {
+                font-size: (28 / @v_width);
+                color: @color;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: (22 / @v_width);
+                color: #ccc;
+            }
+
+            a:nth-child(2) {
+                width: (24 / @v_width);
+                height: (24 / @v_width);
+                margin-left: (24 / @v_width);
+            }
+
+            a:nth-child(3) {
+                width: (72 / @v_width);
+                height: (24 / @v_width);
+                margin-left: (24 / @v_width);
+            }
+        }
+    }
+
+    // bottom 
+    .bottom {
+        display: flex;
+        height: (40 / @v_width);
+        border-bottom: 1px solid #eee;
+
+        // tab
+        .tab {
+            flex: 1;
+            height: (39 / @v_width);
+
+            ul {
+                display: flex;
+
+                li {
+                    line-height: (39 / @v_width);
+                    margin: 0 (16 / @v_width);
+                    border-bottom: 2px solid transparent;
+                    font-size: (14 / @v_width);
+                    color: #333;
+
+                    &.active {
+                        border-bottom-color: @color;
+                    }
+                }
+            }
+        }
+
+        // more
+        .more {
+            width: (40 / @v_width);
+            height: (40 / @v_width);
+            // background-color: pink;
+            text-align: center;
+            line-height: (40 / @v_width);
+            i {
+                font-size: (20 / @v_width);
+                color: #ccc;
+            }
+        }
+    }
+}
+
+
+// 视频
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin-top: (90 / @v_width);
+
+    a {
+        width: (172 / @v_width);
+        height: (134 / @v_width);
+        margin-bottom: (10 / @v_width);
+        // background-color: pink;
+
+        .pic {
+            position: relative;
+            height: (97 / @v_width);
+
+            .count {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                display: flex;
+                justify-content: space-between;
+
+
+                width: 100%;
+                padding: (8 / @v_width);
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+                color: #fff;
+                font-size: (12 / @v_width);
+
+                i {
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        .txt {
+            margin-top: (6 / @v_width);
+            font-size: (12 / @v_width);
+            color: #333;
+        }
+    }
+}
+
+// 按钮
+.btn {
+    position: fixed;
+    left: 0;
+    bottom: (30/ @v_width);
+    height: (36 / @v_width);
+    width: 100%;
+    padding: (12 / @v_width);
+    
+    a {
+        display: block;
+        height: (36 / @v_width);
+        background-color: @color;
+        border-radius: (18 / @v_width);
+        color: #fff;
+        font-size: (14 / @v_width);
+        text-align: center;
+        line-height:  (36 / @v_width);
+    }
+}
